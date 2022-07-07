@@ -8,8 +8,8 @@
         <name>ApexTrigger</name>
     </types>-->
     <types>
-        <members>Account</members>
-        <name>CustomObject</name>
+        <members>Account.Buy_Using_Mainly_Discount__c</members>
+        <name>CustomField</name>
     </types>
     <version>55.0</version>
 </Package>
