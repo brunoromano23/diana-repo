@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Frequency__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (Frequency_Number__c &gt; 2, &quot;Loyal&quot;, IF(Frequency_Number__c = 2, &quot;Client&quot;, IF(Frequency_Number__c = 1, &quot;New&quot;, &quot;Prospect&quot;)))</formula>
+    <inlineHelpText>Prospect, if the user has never placed a order in the last twelve month.
+New, if the user has placed only one order in the last twelve month.
+Client, if the user has placed two orders in the last twelve month.
+Loyal, if the user has placed three or more orders in the last twelve month.</inlineHelpText>
+    <label>Frequency</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

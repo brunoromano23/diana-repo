@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monetary__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( Monetary_Value__c &gt; 700 , &quot;Vip&quot;, IF(Monetary_Value__c &gt; 250, &quot;Elite&quot;, IF(Monetary_Value__c &gt; 100, &quot;Member&quot;, &quot;Junior&quot;)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Junior, if the user has spent less than 100 euros in the last twelve months.
+Member, if the user has spent between 100 and 250 euros in the last twelve months.
+Elite, if the user has spent between 250 and 700 euros in the last twelve months.
+Loyal, if the user has spent more than 700 euros in the last twelve months.</inlineHelpText>
+    <label>Monetary</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

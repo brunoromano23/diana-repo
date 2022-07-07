@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ecommerce_ToBeSync__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked if there are changes to be syncronized in E-Commerce</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checked if there are changes to be syncronized in E-Commerce</inlineHelpText>
+    <label>Ecommerce ToBeSync</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

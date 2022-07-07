@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recency__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( DATEVALUE(Last_Purchase_Date__c) = TODAY()  || Days_Last_Purchase__c &gt; 0, IF(Days_Last_Purchase__c &lt; 180, &quot;Active&quot;, IF(Days_Last_Purchase__c &lt; 365, &quot;Sleeper&quot;, &quot;Inactive&quot;)), &quot;Inactive&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Active, if the user has placed a order in the last six month.
+Sleeper, if the user has placed a order between six and twelve month.
+Inactive, if the user has never placed a order or has placed it before the last twelve months.</inlineHelpText>
+    <label>Recency</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
