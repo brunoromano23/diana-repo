@@ -12,5 +12,7 @@ Keep in mind all the best practices.
 
 ## Solution 
 
-Batch to run async getting records from purchases and call business Apex Class with the business rules to update the new field in Account object
+Batchable class was implemented to run async way getting records from purchases and calling business Apex Class with the business rules to update the new field in Account object
 All developments is listed in package.xml
+
+All classes has Unit Tests ensuring code coverage and asserting the bussiness rules.
