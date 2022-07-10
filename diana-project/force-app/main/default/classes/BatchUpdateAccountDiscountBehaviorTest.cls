@@ -1,8 +1,7 @@
 @IsTest
-public class PurchaseControllerTest {
-    @TestSetup 
+public class BatchUpdateAccountDiscountBehaviorTest {
+    @TestSetup
     public static void testSetup() {  
-
         List<Account> accs = new List<Account>();
         for(Integer i = 0; i < 10; i ++){
             Account acc = new Account();
@@ -71,16 +70,13 @@ public class PurchaseControllerTest {
             }   
         }
         insert purchsItems;
-
- 
     }
-    static testMethod void calculateAccountDiscountBehaviorByPurchasesTest() {
-
-        List<Purchase__c> purchases = [SELECT Id, Account__c, Creation_Date__c, Payment_Status__c, Status__c From Purchase__c
-                                      Where Creation_Date__c = LAST_YEAR And Status__c = 'COMPLETED' And Payment_Status__c = 'PAID'];
-   
-        PurchaseController.calculateAccountDiscountBehaviorByPurchases(purchases);
-      
+    @isTest 
+    public static void testBatchExecution() {
+        Test.startTest();
+        BatchUpdateAccountDiscountBehavior uca = new BatchUpdateAccountDiscountBehavior();
+        Id batchId = Database.executeBatch(uca);
+        Test.stopTest();
         List<Account> accsBuyingGrossPrice  = [Select Id, Buy_Using_Mainly_Discount__c
                                             from Account Where Buy_Using_Mainly_Discount__c = false];
 
@@ -88,10 +84,7 @@ public class PurchaseControllerTest {
                                             from Account Where Buy_Using_Mainly_Discount__c = true];
     
 
-
         System.assert(accsBuyingGrossPrice.size() == 6);
-        System.assert(accBuyingDiscountPrice.size() == 4);
-
+        System.assert(accBuyingDiscountPrice.size() == 4);    
     }
-    
 }
