@@ -1,18 +1,18 @@
-# Salesforce DX Project: Next Steps
+# Diana Technical Assessement
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
 
-## How Do You Plan to Deploy Your Changes?
+CRM analyst wants to analyze customers' purchasing habits using the data present in the CRM. Specifically, he wants to analyze whether customers mainly buy products at full price or if they mainly buy them at a discounted price.
+This information must be present in the object of each customer in the CRM and must take into account only the data of the orders placed by the customer in the last year.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Create a new custom field in the Account object to store this information.
+Calculate the value of this new custom field for every customer.
+Keep in mind all the best practices.
 
-## Configure Your Salesforce DX Project
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Solution 
 
-## Read All About It
+Batchable class was implemented to run async way getting records from purchases and calling business Apex Class with the business rules to update the new field in Account object
+All developments is listed in package.xml
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+All classes has Unit Tests ensuring 100% of code coverage and asserting the bussiness rules.
