@@ -15,4 +15,4 @@ Keep in mind all the best practices.
 Batchable class was implemented to run async way getting records from purchases and calling business Apex Class with the business rules to update the new field in Account object
 All developments is listed in package.xml
 
-All classes has Unit Tests ensuring code coverage and asserting the bussiness rules.
+All classes has Unit Tests ensuring 100% of code coverage and asserting the bussiness rules.
